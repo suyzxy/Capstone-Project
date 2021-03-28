@@ -1,3 +1,0 @@
-b. Connecting to VPN with GlobalProtect
-When you completed to install, you can find the icon of GlobalProtect in the start menu.
-Then, you can click the Settings button and add vpn.marshall.edu to the following page. Then, you can connect the GlobalProtect
