@@ -1,0 +1,4 @@
+a. Downloading Palo Alto GlobalProtect VPN 
+Downloading Palo Alto GlobalProtect VPN from 
+https://www.marshall.edu/it/departments/it-service-desk/network-wireless/
+When you click on Palo Alto GlobalProtect, it will take you to the following page where you can install it based on the version of your computer system.
