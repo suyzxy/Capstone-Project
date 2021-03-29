@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>2. Installing DeepLabCut on your computer &mdash; Capstone Project  documentation</title>
+  <title>1. Connecting to Test Server &mdash; Capstone Project  documentation</title>
   
 
   
@@ -37,7 +37,9 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Installing DeepLabCut on your computer" href="2.%20Installing%20DeepLabCut%20on%20your%20computer.html" />
+    <link rel="prev" title="Welcome to Xiji Zhao’s documentation!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,8 +85,8 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1.%20Connecting%20to%20Test%20Server.html">1. Connecting to Test Server</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Connecting to Test Server</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2.%20Installing%20DeepLabCut%20on%20your%20computer.html">2. Installing DeepLabCut on your computer</a></li>
 </ul>
 
@@ -134,13 +136,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>2. Installing DeepLabCut on your computer</li>
+      <li>1. Connecting to Test Server</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/2. Installing DeepLabCut on your computer.md.md.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/1. Connecting to Test Server.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -153,29 +155,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="installing-deeplabcut-on-your-computer">
-<h1>2. Installing DeepLabCut on your computer<a class="headerlink" href="#installing-deeplabcut-on-your-computer" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="a-anaconda-downloading-and-installtion">
-<h2>a. Anaconda downloading and installtion<a class="headerlink" href="#a-anaconda-downloading-and-installtion" title="Permalink to this headline">¶</a></h2>
-<p>You can go to the website <a class="reference external" href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a> and find the “Install Anaconda” button to download and install Anaconda.</p>
-</div>
-<div class="section" id="b-dowloading-the-conda-config-files-for-launching-your-environment">
-<h2>b. Dowloading the conda config files for launching your environment<a class="headerlink" href="#b-dowloading-the-conda-config-files-for-launching-your-environment" title="Permalink to this headline">¶</a></h2>
-<p>You can download appropriate DeepLabCut’s conda file from <a class="reference external" href="http://www.mackenziemathislab.org/deeplabcut">http://www.mackenziemathislab.org/deeplabcut</a>
-<img alt="avatar" src="_images/Conda.png" /></p>
-<p>You also can download the appropriate file from these links below:</p>
-<p>For CPU: <a class="reference external" href="http://www.mackenziemathislab.org/s/DLC-CPU.yaml">http://www.mackenziemathislab.org/s/DLC-CPU.yaml</a></p>
-<p>For GPU: <a class="reference external" href="http://www.mackenziemathislab.org/s/DLC-GPU.yaml">http://www.mackenziemathislab.org/s/DLC-GPU.yaml</a></p>
-</div>
-<div class="section" id="c-creating-your-conda-environment">
-<h2>c. Creating your conda environment<a class="headerlink" href="#c-creating-your-conda-environment" title="Permalink to this headline">¶</a></h2>
-<p>When you completed to install Anaconda, you can open Anaconda Navigator on your PC and click the ‘<em>Environments</em>’ and click “<em>Import</em>” and select the <code class="docutils literal notranslate"><span class="pre">Conda.yaml</span></code> file you downloaded, and you can create your conda environment.
-<img alt="avatar" src="_images/P7.png" /></p>
-<p>Once the environment has been imported, select it and click on the “<em>Play</em>” button, and select “<em>Open with IPython</em>” and open a terminal window.
-In the terminal, type ‘<em><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">deeplabcut</span></code></em>’ and type ‘<em><code class="docutils literal notranslate"><span class="pre">deeplabcut.launch_dlc()</span></code></em>’ to launch DeepLabCut’s GUI
-<img alt="avatar" src="_images/P8.png" />
-<img alt="avatar" src="_images/P9.png" /></p>
-</div>
+  <div class="section" id="connecting-to-test-server">
+<h1>1. Connecting to Test Server<a class="headerlink" href="#connecting-to-test-server" title="Permalink to this headline">¶</a></h1>
+<p>a. Downloading Palo Alto GlobalProtect VPN
+Downloading Palo Alto GlobalProtect VPN from &lt;<a class="reference external" href="https://www.marshall.edu/it/departments/it-service-desk/network-wireless/">https://www.marshall.edu/it/departments/it-service-desk/network-wireless/</a>&gt;
+![avatar](E:/Project/images/P0.png)</p>
+<p>When you click on Palo Alto GlobalProtect, it will take you to the following page where you can install it based on the version of your computer system.
+![avatar](E:/Project/images/P1.png)</p>
+<p>## b. Connecting to VPN with GlobalProtect
+When you completed to install, you can find the icon of GlobalProtect in the start menu.
+![avatar](E:/Project/images/P3.png)</p>
+<p>Then, you can click the Settings button and add vpn.marshall.edu to the following page. Then, you can connect the GlobalProtect
+![avatar](E:/Project/images/P4.png)</p>
+<p>## c. Open the SSH client.
+You can use Windows PowerShell(or PuTTy from &lt;<a class="reference external" href="https://www.putty.org/">https://www.putty.org/</a>&gt;)</p>
+<p>When you enter the PowerShell, you can use command below:
+ssh <cite>yourID&#64;csmars.marshall.edu`(i.e `zhao54&#64;csmars.marshall.edu</cite>) to process and enter your MyMU password when it prompted the password command.
+![avatar](E:/Project/images/P5.png)</p>
+<p>Then, you will see the Ubuntu startup guidance shown above.
+Finally, you can use logout command to close the SSH and disconnect from Marshall VPN when you finished the process.
+![avatar](E:/Project/images/P6.png)</p>
 </div>
 
 
@@ -183,6 +182,10 @@ In the terminal, type ‘<em><code class="docutils literal notranslate"><span cl
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="2.%20Installing%20DeepLabCut%20on%20your%20computer.html" class="btn btn-neutral float-right" title="2. Installing DeepLabCut on your computer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Xiji Zhao’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

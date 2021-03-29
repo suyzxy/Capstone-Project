@@ -1,11 +1,9 @@
 2. Installing DeepLabCut on your computer
-==========================================
-a. Anaconda downloading and installtion
------------------------------------------
+============================================
+## a. Anaconda downloading and installtion 
 You can go to the website <https://www.anaconda.com/products/individual> and find the “Install Anaconda” button to download and install Anaconda.
 
-b. Dowloading the conda config files for launching your environment
-------------------------------------------------
+## b. Dowloading the conda config files for launching your environment
 You can download appropriate DeepLabCut's conda file from <http://www.mackenziemathislab.org/deeplabcut>
 ![avatar](E:/Project/images/Conda.png)
 
@@ -16,8 +14,7 @@ For CPU: <http://www.mackenziemathislab.org/s/DLC-CPU.yaml>
 
 For GPU: <http://www.mackenziemathislab.org/s/DLC-GPU.yaml>
 
-c. Creating your conda environment
----------------------------------------
+## c. Creating your conda environment
 When you completed to install Anaconda, you can open Anaconda Navigator on your PC and click the '*Environments*' and click "*Import*" and select the `Conda.yaml` file you downloaded, and you can create your conda environment.
 ![avatar](E:/Project/images/P7.png)
 

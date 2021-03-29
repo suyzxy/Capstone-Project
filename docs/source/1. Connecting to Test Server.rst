@@ -1,5 +1,6 @@
-# 1. Connecting to Test Server
-## a. Downloading Palo Alto GlobalProtect VPN
+1. Connecting to Test Server
+===================================
+a. Downloading Palo Alto GlobalProtect VPN
 Downloading Palo Alto GlobalProtect VPN from <https://www.marshall.edu/it/departments/it-service-desk/network-wireless/>
 ![avatar](E:/Project/images/P0.png)
 

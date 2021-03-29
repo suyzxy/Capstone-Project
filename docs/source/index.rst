@@ -11,8 +11,8 @@ Welcome to Xiji Zhao's documentation!
    :hidden:
    :caption: Contents:
 
-   1. Connecting to Test Server.md
-   2. Installing DeepLabCut on your computer.md
+   1. Connecting to Test Server
+   2. Installing DeepLabCut on your computer
 
 
 
