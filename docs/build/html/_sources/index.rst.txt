@@ -9,7 +9,7 @@ Welcome to Xiji Zhao's documentation!
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Contents:
+   :caption: Installation:
 
    1. Connecting to Test Server
    2. Installing DeepLabCut on your computer
