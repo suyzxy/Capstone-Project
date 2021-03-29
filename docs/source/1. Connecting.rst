@@ -1,4 +1,4 @@
-1. Connecting to Test Server
+1. Connecting 
 ===================================
 a. Downloading Palo Alto GlobalProtect VPN
 ----------------------------------------------
@@ -6,7 +6,7 @@ Downloading Palo Alto GlobalProtect VPN from <https://www.marshall.edu/it/depart
 
 When you click on Palo Alto GlobalProtect, it will take you to the following page where you can install it based on the version of your computer system. 
 
-b. Connecting to VPN with GlobalProtect
+b. Connecting to VPN 
 --------------------------------------------
 When you completed to install, you can find the icon of GlobalProtect in the start menu.
 
