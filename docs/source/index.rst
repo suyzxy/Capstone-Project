@@ -11,8 +11,9 @@ Welcome to Xiji Zhao's documentation!
    :hidden:
    :caption: Installation:
 
-   1. Connecting 
-   2. Installing DeepLabCut 
+   1. Connecting to Test Server
+   2. Installing DeepLabCut on your computer
+
 
 
 
