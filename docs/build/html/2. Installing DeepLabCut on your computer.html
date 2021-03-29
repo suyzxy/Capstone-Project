@@ -86,7 +86,12 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="1.%20Connecting%20to%20Test%20Server.html">1. Connecting to Test Server</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Installing DeepLabCut on your computer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Installing DeepLabCut on your computer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-anaconda-downloading-and-installtion">a. Anaconda downloading and installtion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b-dowloading-the-conda-config-files-for-launching-your-environment">b. Dowloading the conda config files for launching your environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-creating-your-conda-environment">c. Creating your conda environment</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -156,21 +161,23 @@
             
   <div class="section" id="installing-deeplabcut-on-your-computer">
 <h1>2. Installing DeepLabCut on your computer<a class="headerlink" href="#installing-deeplabcut-on-your-computer" title="Permalink to this headline">¶</a></h1>
-<p>## a. Anaconda downloading and installtion
-You can go to the website &lt;<a class="reference external" href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a>&gt; and find the “Install Anaconda” button to download and install Anaconda.</p>
-<p>## b. Dowloading the conda config files for launching your environment
-You can download appropriate DeepLabCut’s conda file from &lt;<a class="reference external" href="http://www.mackenziemathislab.org/deeplabcut">http://www.mackenziemathislab.org/deeplabcut</a>&gt;
-![avatar](E:/Project/images/Conda.png)</p>
+<div class="section" id="a-anaconda-downloading-and-installtion">
+<h2>a. Anaconda downloading and installtion<a class="headerlink" href="#a-anaconda-downloading-and-installtion" title="Permalink to this headline">¶</a></h2>
+<p>You can go to the website &lt;<a class="reference external" href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a>&gt; and find the “Install Anaconda” button to download and install Anaconda.</p>
+</div>
+<div class="section" id="b-dowloading-the-conda-config-files-for-launching-your-environment">
+<h2>b. Dowloading the conda config files for launching your environment<a class="headerlink" href="#b-dowloading-the-conda-config-files-for-launching-your-environment" title="Permalink to this headline">¶</a></h2>
+<p>You can download appropriate DeepLabCut’s conda file from &lt;<a class="reference external" href="http://www.mackenziemathislab.org/deeplabcut">http://www.mackenziemathislab.org/deeplabcut</a>&gt;</p>
 <p>You also can download the appropriate file from these links below:</p>
 <p>For CPU: &lt;<a class="reference external" href="http://www.mackenziemathislab.org/s/DLC-CPU.yaml">http://www.mackenziemathislab.org/s/DLC-CPU.yaml</a>&gt;</p>
 <p>For GPU: &lt;<a class="reference external" href="http://www.mackenziemathislab.org/s/DLC-GPU.yaml">http://www.mackenziemathislab.org/s/DLC-GPU.yaml</a>&gt;</p>
-<p>## c. Creating your conda environment
-When you completed to install Anaconda, you can open Anaconda Navigator on your PC and click the ‘<em>Environments</em>’ and click “<em>Import</em>” and select the <cite>Conda.yaml</cite> file you downloaded, and you can create your conda environment.
-![avatar](E:/Project/images/P7.png)</p>
+</div>
+<div class="section" id="c-creating-your-conda-environment">
+<h2>c. Creating your conda environment<a class="headerlink" href="#c-creating-your-conda-environment" title="Permalink to this headline">¶</a></h2>
+<p>When you completed to install Anaconda, you can open Anaconda Navigator on your PC and click the ‘<em>Environments</em>’ and click “<em>Import</em>” and select the <cite>Conda.yaml</cite> file you downloaded, and you can create your conda environment.</p>
 <p>Once the environment has been imported, select it and click on the “<em>Play</em>” button, and select “<em>Open with IPython</em>” and open a terminal window.
-In the terminal, type ‘<em>`import deeplabcut`</em>’ and type ‘<em>`deeplabcut.launch_dlc()`</em>’ to launch DeepLabCut’s GUI
-![avatar](E:/Project/images/P8.png)
-![avatar](E:/Project/images/P9.png)</p>
+In the terminal, type ‘<em>`import deeplabcut`</em>’ and type ‘<em>`deeplabcut.launch_dlc()`</em>’ to launch DeepLabCut’s GUI</p>
+</div>
 </div>
 
 
