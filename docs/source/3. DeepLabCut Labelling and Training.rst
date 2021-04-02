@@ -38,7 +38,7 @@ Step 1 - Local machine and server preparation:
 
 ●	Use MatLAB code to convert image data binary file to .*avi*. 
 
-.. image:: images/step1.png
+.. image:: images/Step1.png
 
 The following steps are carried out on the **Windows machine**.
 
