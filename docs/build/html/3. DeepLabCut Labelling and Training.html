@@ -196,13 +196,13 @@
 </div></blockquote>
 <p>●       Use MatLAB code to convert image data binary file to .*avi*.</p>
 <img alt="_images/Step1.png" src="_images/Step1.png" />
-<p>The following steps are carried out on the <strong>Windows machine</strong>.</p>
+<p>The following 4 steps（step 2-step 5) are carried out on the <strong>Windows machine</strong>.</p>
 </div>
 <div class="section" id="step-2-create-the-project-file">
 <h2>Step 2 - Create the project file.<a class="headerlink" href="#step-2-create-the-project-file" title="Permalink to this headline">¶</a></h2>
 <p>●       Open Anaconda, activate the DLC-CPU environment, and open it with IPython.</p>
-<p>●       Type <em>import deeplabcut</em> in the terminal that appears.</p>
-<p>●       Type <a href="#id1"><span class="problematic" id="id2">*</span></a>deeplabcut.launch_dlc*() to start DeepLabCut’s GUI.</p>
+<p>●       Type ‘import deeplabcut’ in the terminal that appears.</p>
+<p>●       Type <strong>deeplabcut.launch_dlc()</strong> to start DeepLabCut’s GUI.</p>
 <p>●       Click on the <strong>Manage Project</strong> tab and select <strong>Create new project</strong>.</p>
 <p>●       Give the project a <strong>name</strong>, the <strong>experimenter’s name</strong>, and <strong>select the video(s)</strong> to be used.</p>
 <p>●       Under optional attributes, select <strong>copy the videos</strong>. This attribute is necessary on Windows operating systems.</p>
@@ -211,7 +211,7 @@
 </div>
 <div class="section" id="step-3-edit-project-configuration-file">
 <h2>Step 3 - Edit Project Configuration file<a class="headerlink" href="#step-3-edit-project-configuration-file" title="Permalink to this headline">¶</a></h2>
-<p>●       In the <em>config.yaml</em> file, we changed the following fields:</p>
+<p>●       In the <strong>config.yaml</strong> file, we changed the following fields:</p>
 <blockquote>
 <div><p>○     bodyparts</p>
 <p>○     numframes2pick</p>
@@ -242,15 +242,17 @@
 <p>●       Once all frames have been labeled, select <strong>Quit</strong>.</p>
 <p>●       Press the <strong>Check Labels</strong>! Button to ensure that the frames were labelled successfully.</p>
 <img alt="_images/step5.png" src="_images/step5.png" />
-<p>The following steps are carried out on the <strong>Linux server</strong>.</p>
+<p>The following 2 steps(step 6-step 7) are carried out on the <strong>Linux server</strong>.</p>
 </div>
 <div class="section" id="step-6-create-training-dataset">
 <h2>Step 6 - Create training dataset<a class="headerlink" href="#step-6-create-training-dataset" title="Permalink to this headline">¶</a></h2>
 <p>●       Move the project to the computer/server/data cluster where it will be trained.</p>
-<p>●       <strong>IMPORTANT</strong>: Once on the training machine, edit the <strong>project_path</strong> parameter in <em>config.yaml</em> with the project’s new path.</p>
+<blockquote>
+<div><p>○    <strong>IMPORTANT</strong>: Once on the training machine, edit the <strong>project_path</strong> parameter in <strong>config.yaml</strong> with the project’s new path.</p>
+</div></blockquote>
 <p>●       Activate the conda environment on the server.</p>
-<p>●       Use <em>export DLClight=True</em> to suppress the GUI (if machine does not support GUIs).</p>
-<p>●       Open <strong>IPython</strong> and run <em>import deeplabcut</em>.</p>
+<p>●       Use <strong>export DLClight=True</strong> to suppress the GUI (if machine does not support GUIs).</p>
+<p>●       Open <strong>IPython</strong> and run <strong>import deeplabcut</strong>.</p>
 <p>●       Create a variable to store the path of your config file:</p>
 <img alt="_images/step6.png" src="_images/step6.png" />
 <p>●       Use the following command to create the training dataset:</p>
@@ -274,7 +276,7 @@
 <p>●       <strong>Displayiters</strong> indicates how often the network will display loss information.</p>
 <p>●       <strong>Saveiters</strong> determines how often states of the network are saved.</p>
 <p>●       <strong>Maxiters</strong> determines how many iterations the network will be trained for.</p>
-<p>The following steps are carried out on the <strong>Windows Machine</strong>.</p>
+<p>The following 3 steps(step 8-step 10) are carried out on the <strong>Windows Machine</strong>.</p>
 </div>
 <div class="section" id="step-8-evaluate-the-network">
 <h2>Step 8 - Evaluate the network<a class="headerlink" href="#step-8-evaluate-the-network" title="Permalink to this headline">¶</a></h2>
@@ -282,7 +284,7 @@
 <blockquote>
 <div><p>○    <strong>IMPORTANT</strong>: Once on the Windows machine, edit the <strong>project_path</strong> parameter in <em>config.yaml</em> with the project’s new path.</p>
 </div></blockquote>
-<p>●       Under the Evaluate Network tab in the DeepLabCut GUI, we used the following attributes:</p>
+<p>●       Under the <strong>Evaluate Network</strong> tab in the DeepLabCut GUI, we used the following attributes:</p>
 <blockquote>
 <div><p>○    <strong>Specify the shuffle: 1</strong></p>
 <p>○    <strong>Specify the trainingset index</strong>: 0</p>
