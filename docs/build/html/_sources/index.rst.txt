@@ -3,15 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Capstone documentation!
-=====================================
+Welcome to DeepLabCut Program Documentation!
+===============================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Installation:
+   :caption: DeepLabCut Program:
 
    1. Connecting to Test Server
    2. Installing DeepLabCut on your computer
+   3. DeepLabCut Labelling and Training
 
 
 
