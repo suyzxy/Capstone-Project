@@ -48,7 +48,7 @@ Step 2 - Create the project file.
 
 ●	Type *import deeplabcut* in the terminal that appears.
 
-●	Type *deeplabcut.launch_dlc*() to start  DeepLabCut’s GUI. 
+●	Type *deeplabcut.launch_dlc*() to start DeepLabCut’s GUI. 
 
 ●	Click on the **Manage Project** tab and select **Create new project**.
 
