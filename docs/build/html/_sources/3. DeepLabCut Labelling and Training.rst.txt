@@ -30,7 +30,7 @@ Step 1 - Local machine and server preparation:
 
        ○	Install Anaconda Individual Edition.
 
-   ○	Use Conda Configuration file provided by DLC developers for **GPU** for Anaconda environment setup (http://www.mackenziemathislab.org/deeplabcut)
+       ○	Use Conda Configuration file provided by DLC developers for **GPU** for Anaconda environment setup (http://www.mackenziemathislab.org/deeplabcut)
 
    **[OPTIONAL]** Step 1a - Video Data Conversion
 
