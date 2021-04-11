@@ -88,7 +88,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction and Background</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#a-introduction-of-deeplabcut">a. Introduction of DeepLabCut</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#b-the-object-of-project">b. The Object of Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b-the-objective-of-project">b. The Objective of Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#c-the-backgroud-of-project">c. The Backgroud of Project</a></li>
 </ul>
 </li>
@@ -165,12 +165,21 @@
 <h1>1. Introduction and Background<a class="headerlink" href="#introduction-and-background" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="a-introduction-of-deeplabcut">
 <h2>a. Introduction of DeepLabCut<a class="headerlink" href="#a-introduction-of-deeplabcut" title="Permalink to this headline">¶</a></h2>
+<p>DeepLabCut is an advanced human pose estimation algorithm called DeeperCut can use relatively small amounts of annotated data in the lab. The main motivation of the DeePlabCut was to provide a reliable and effective tool for high-throughput video analysis, in this case learning about powerful user-defined feature detectors for body parts.</p>
+<p>DeepLabCut has been used to extract user-defined locations of key body parts from animals (including humans).</p>
+<p>DeepLabCut is best suited for one or more cameras to capture the action in one place with minimal occlusion. Users can train the network to achieve human-level marking accuracy with just a small group of training images, and extend its applications to behavioral analysis in the laboratory, such as for movement, gait analysis, medical and rehabilitation research.</p>
 </div>
-<div class="section" id="b-the-object-of-project">
-<h2>b. The Object of Project<a class="headerlink" href="#b-the-object-of-project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="b-the-objective-of-project">
+<h2>b. The Objective of Project<a class="headerlink" href="#b-the-objective-of-project" title="Permalink to this headline">¶</a></h2>
+<p>The objective of this project is to improve the centroid tracking of Drosophila melanogaster using a deep learning model using an unlabeled pose estimation toolkit, DeePlabCut.</p>
+<p>We used Drosophila Melanogaster for this project.The reason is that insects are commonly used for genetic investigations of humans and are considered to be one of the most perfect organisms for genetic patterns.</p>
+<p>It is estimated that 60% of the fly genome is similar to the human genome.About 75% of human disease genes can be identified in fly genomes.Second, studying flies’ behavior patterns could allow biologists and neuroscientists to better understand human behavior patterns.</p>
 </div>
 <div class="section" id="c-the-backgroud-of-project">
 <h2>c. The Backgroud of Project<a class="headerlink" href="#c-the-backgroud-of-project" title="Permalink to this headline">¶</a></h2>
+<p>A research team at Kennesaw State University is currently developing a transparent omnidirectional motion compensator (TOLC) that allows flies to move indefinitely in a limited space, and errors in centroid calculations can degrade the performance of TOLC.</p>
+<p>Currently, the team uses image segmentation to track the fly’s center of mass.This method makes it difficult to define the area of the object, and results are inaccurate due to the movement of the fly.</p>
+<p>The team is looking for a way to collect a more precise center of mass in images of Drosophila melanogaster. Our goal is to use DeePlabCut to greatly improve the speed and accuracy of tracking, which will allow KSU’s research team to better study fly behavior.</p>
 </div>
 </div>
 
