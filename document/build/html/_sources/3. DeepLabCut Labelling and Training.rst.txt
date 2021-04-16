@@ -1,5 +1,7 @@
 3. DeepLabCut Labelling and Training
 ========================================
+The objective of our capstone project is to train a network to recognize and track the center point (centroid) of the fruit fly.  This is the point that the TOLC uses to determine how to orient the sphere. We manually labeled 100 frames out of a total of 60,984 to create a network that automatically places the centroid label on the fly. In addition to the centroids, we trained a network that recognizes and places labels on the fly’s legs. For this network, we manually labeled 200 frames to ensure that we got the results we desired.
+
 **SOFTWARE**:
 
   Anaconda Individual Edition 1.10.0
