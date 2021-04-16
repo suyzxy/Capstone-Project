@@ -1,4 +1,4 @@
-IV. DeepLabCut Labelling and Training
+III. DeepLabCut Labelling and Training
 ========================================
 **SOFTWARE**:
 
