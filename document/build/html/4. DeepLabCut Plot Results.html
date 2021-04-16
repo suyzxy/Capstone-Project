@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>4. DeepLabCut Plots Results &mdash; Improving Drosophila Melanogaster Feature Tracking with DeepLabCut  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. Conclusion" href="5.%20Conclusion.html" />
+    <link rel="prev" title="3. DeepLabCut Labelling and Training" href="3.%20DeepLabCut%20Labelling%20and%20Training.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Improving Drosophila Melanogaster Feature Tracking with DeepLabCut
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1.%20Introduction%20and%20Background.html">1. Introduction and Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.%20Installing%20DeepLabCut%20on%20your%20computer.html">2. Installing DeepLabCut on your computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.%20DeepLabCut%20Labelling%20and%20Training.html">3. DeepLabCut Labelling and Training</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. DeepLabCut Plots Results</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-centroid-network-plots">a. Centroid Network Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b-legs-networks">b. Legs Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5.%20Conclusion.html">5. Conclusion</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Improving Drosophila Melanogaster Feature Tracking with DeepLabCut</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>4. DeepLabCut Plots Results</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/4. DeepLabCut Plot Results.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deeplabcut-plots-results">
+<h1>4. DeepLabCut Plots Results<a class="headerlink" href="#deeplabcut-plots-results" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a-centroid-network-plots">
+<h2>a. Centroid Network Plots<a class="headerlink" href="#a-centroid-network-plots" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Plot 1</strong></p>
+<blockquote>
+<div><img alt="_images/P1.png" src="_images/P1.png" />
+<p>This plot shows the X and Y position of the fly’s centroid over the course of the entire video. The plot shows the centroid’s position in perspective of the frame of the video.</p>
+</div></blockquote>
+<p><strong>Plot 2</strong></p>
+<blockquote>
+<div><img alt="_images/P2.png" src="_images/P2.png" />
+<p>This plot also displays the X and Y position of the centroid over time in a linear fashion.</p>
+</div></blockquote>
+<p><strong>Plot 3</strong></p>
+<blockquote>
+<div><img alt="_images/P3.png" src="_images/P3.png" />
+<p>This plot shows how much the centroid moves between each frame. High values would be indicative of when the label “jumps” unnaturally from one frame to the next. The low values depicted in the graph are what we expect to see.</p>
+</div></blockquote>
+<p><strong>Plot 4</strong></p>
+<blockquote>
+<div><img alt="_images/P4.png" src="_images/P4.png" />
+<p>This plot shows the confidence score of the network over the course of the video. We see that for the majority of the video, the network has a maximum confidence score of 1.0. The sudden drop towards the end is caused by the fly losing illumination in the video and becoming blurry.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="b-legs-networks">
+<h2>b. Legs Networks<a class="headerlink" href="#b-legs-networks" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>Plot 5</strong></p>
+<blockquote>
+<div><img alt="_images/P5.png" src="_images/P5.png" />
+<p>This plot shows the X and Y position of each of the fly’s legs over the course of the entire video. The plot shows the legs’s position in perspective of the frame of the video.</p>
+</div></blockquote>
+<p><strong>Plot 6</strong></p>
+<blockquote>
+<div><img alt="_images/P6.png" src="_images/P6.png" />
+<p>This plot also displays the X and Y position of each leg over time in a linear fashion.</p>
+</div></blockquote>
+<p><strong>Plot 7</strong></p>
+<blockquote>
+<div><img alt="_images/P71.png" src="_images/P71.png" />
+<p>This plot shows how much the legs move between each frame. High values would be indicative of when the label “jumps” unnaturally from one frame to the next. The low values depicted in the graph are what we expect to see. We note that there is a larger concentration of higher values compared to the centroid graph. The legs of the fly more frequently become invisible in the video which causes this.</p>
+</div></blockquote>
+<p><strong>Plot 8</strong></p>
+<blockquote>
+<div><img alt="_images/P81.png" src="_images/P81.png" />
+<p>Confidence scores for the legs network. Immediately we see that the network’s confidence varies widely over the course of the video. This could be remedied to a degree by refining the network. The most improvement to this would likely be a better method of recording the fly so that its features do not become undetectable.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="5.%20Conclusion.html" class="btn btn-neutral float-right" title="5. Conclusion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="3.%20DeepLabCut%20Labelling%20and%20Training.html" class="btn btn-neutral float-left" title="3. DeepLabCut Labelling and Training" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Brayden Waugh, Garrett O’Dell, Xiji Zhao.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-I. Introduction and Background
+1. Introduction and Background
 ===================================
 a. Introduction of DeepLabCut
 ----------------------------------------------
