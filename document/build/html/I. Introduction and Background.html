@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>1. Introduction and Background &mdash; Improving Drosophila Melanogaster Feature Tracking with DeepLabCut  documentation</title>
+  <title>I. Introduction and Background &mdash; Improving Drosophila Melanogaster Feature Tracking with DeepLabCut  documentation</title>
   
 
   
@@ -38,7 +38,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Installing DeepLabCut on your computer" href="2.%20Installing%20DeepLabCut%20on%20your%20computer.html" />
+    <link rel="next" title="II. Installing DeepLabCut on your computer" href="II.%20Installing%20DeepLabCut%20on%20your%20computer.html" />
     <link rel="prev" title="Welcome to Improving Drosophila Melanogaster Feature Tracking with DeepLabCut’s documentation!" href="index.html" /> 
 </head>
 
@@ -86,14 +86,16 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction and Background</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">I. Introduction and Background</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#a-introduction-of-deeplabcut">a. Introduction of DeepLabCut</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#b-the-objective-of-project">b. The Objective of Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#c-the-backgroud-of-project">c. The Backgroud of Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b-the-backgroud-of-project">b. The Backgroud of Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-the-objective-of-project">c. The Objective of Project</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.%20Installing%20DeepLabCut%20on%20your%20computer.html">2. Installing DeepLabCut on your computer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3.%20DeepLabCut%20Labelling%20and%20Training.html">3. DeepLabCut Labelling and Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="II.%20Installing%20DeepLabCut%20on%20your%20computer.html">II. Installing DeepLabCut on your computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="III.%20DeepLabCut%20Labelling%20and%20Training.html">IV. DeepLabCut Labelling and Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IV.%20DeepLabCut%20Plot%20Results.html">IV. DeepLabCut Plots Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="V.%20Conclusion.html">V. Conclusion</a></li>
 </ul>
 
             
@@ -142,13 +144,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>1. Introduction and Background</li>
+      <li>I. Introduction and Background</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/1. Introduction and Background.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/I. Introduction and Background.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -161,25 +163,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduction-and-background">
-<h1>1. Introduction and Background<a class="headerlink" href="#introduction-and-background" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="i-introduction-and-background">
+<h1>I. Introduction and Background<a class="headerlink" href="#i-introduction-and-background" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="a-introduction-of-deeplabcut">
 <h2>a. Introduction of DeepLabCut<a class="headerlink" href="#a-introduction-of-deeplabcut" title="Permalink to this headline">¶</a></h2>
 <p>DeepLabCut is an advanced human pose estimation algorithm called DeeperCut can use relatively small amounts of annotated data in the lab. The main motivation of the DeePlabCut was to provide a reliable and effective tool for high-throughput video analysis, in this case learning about powerful user-defined feature detectors for body parts.</p>
 <p>DeepLabCut has been used to extract user-defined locations of key body parts from animals (including humans).</p>
 <p>DeepLabCut is best suited for one or more cameras to capture the action in one place with minimal occlusion. Users can train the network to achieve human-level marking accuracy with just a small group of training images, and extend its applications to behavioral analysis in the laboratory, such as for movement, gait analysis, medical and rehabilitation research.</p>
 </div>
-<div class="section" id="b-the-objective-of-project">
-<h2>b. The Objective of Project<a class="headerlink" href="#b-the-objective-of-project" title="Permalink to this headline">¶</a></h2>
-<p>The objective of this project is to improve the centroid tracking of Drosophila melanogaster using a deep learning model using an unlabeled pose estimation toolkit, DeePlabCut.</p>
-<p>We used Drosophila Melanogaster for this project.The reason is that insects are commonly used for genetic investigations of humans and are considered to be one of the most perfect organisms for genetic patterns.</p>
-<p>It is estimated that 60% of the fly genome is similar to the human genome.About 75% of human disease genes can be identified in fly genomes.Second, studying flies’ behavior patterns could allow biologists and neuroscientists to better understand human behavior patterns.</p>
-</div>
-<div class="section" id="c-the-backgroud-of-project">
-<h2>c. The Backgroud of Project<a class="headerlink" href="#c-the-backgroud-of-project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="b-the-backgroud-of-project">
+<h2>b. The Backgroud of Project<a class="headerlink" href="#b-the-backgroud-of-project" title="Permalink to this headline">¶</a></h2>
+<p>A species of fruit fly (drosophila melanogaster) is one of the most studied organisms in biological research, and has historically been used for genetic analysis in order to better understand other eukaryotic organisms, including humans.</p>
 <p>A research team at Kennesaw State University is currently developing a transparent omnidirectional motion compensator (TOLC) that allows flies to move indefinitely in a limited space, and errors in centroid calculations can degrade the performance of TOLC.</p>
 <p>Currently, the team uses image segmentation to track the fly’s center of mass.This method makes it difficult to define the area of the object, and results are inaccurate due to the movement of the fly.</p>
-<p>The team is looking for a way to collect a more precise center of mass in images of Drosophila melanogaster. Our goal is to use DeePlabCut to greatly improve the speed and accuracy of tracking, which will allow KSU’s research team to better study fly behavior.</p>
+<p>The team is looking for a way to collect a more precise center of mass in images of Drosophila melanogaster. Our goal is to use DeeplabCut to greatly improve the speed and accuracy of tracking, which will allow KSU’s research team to better study fly behavior.</p>
+<p>The current method the TOLC uses to predict the fly’s movement requires vulnerable morphological information (to detect the position and orientation of the fly) and error compensation (due to the distortion caused by the sphere). To remedy this, our team is using the software package DeepLabCut for animal pose estimation. DeepLabCut provides the ability to track desired features of an animal by means of transfer learning with deep learning networks that can achieve human-level accuracy with minimal training data.</p>
+</div>
+<div class="section" id="c-the-objective-of-project">
+<h2>c. The Objective of Project<a class="headerlink" href="#c-the-objective-of-project" title="Permalink to this headline">¶</a></h2>
+<p>The objective of our team’s project is to train a network to recognize and track the center point (centroid) of the fruit fly. This is the point that the TOLC uses to determine how to orient the sphere. We manually labeled 100 frames out of a total of 60,984 to create a network that automatically places the centroid label on the fly.</p>
+<p>We used Drosophila Melanogaster for this project.The reason is that insects are commonly used for genetic investigations of humans and are considered to be one of the most perfect organisms for genetic patterns.</p>
+<p>It is estimated that 60% of the fly genome is similar to the human genome.About 75% of human disease genes can be identified in fly genomes.Second, studying flies’ behavior patterns could allow biologists and neuroscientists to better understand human behavior patterns.</p>
+<p>Our secondary focus was to train a network that recognizes and places labels on each of the fly’s legs. For this network, we manually labeled 200 frames to ensure that we got the results we desired. While legs tracking is not used by the TOLC, we wanted to demonstrate the power and ease-of-use of the DeepLabCut toolbox.</p>
+<p>Finally, our work and trained networks will be provided to the development team behind the TOLC and will potentially be used in an enhanced version of the device.</p>
 </div>
 </div>
 
@@ -189,7 +195,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="2.%20Installing%20DeepLabCut%20on%20your%20computer.html" class="btn btn-neutral float-right" title="2. Installing DeepLabCut on your computer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="II.%20Installing%20DeepLabCut%20on%20your%20computer.html" class="btn btn-neutral float-right" title="II. Installing DeepLabCut on your computer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Improving Drosophila Melanogaster Feature Tracking with DeepLabCut’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
