@@ -5,7 +5,7 @@ a. Anaconda downloading and installtion
   You can go to the website https://www.anaconda.com/products/individual  
   Then, find the “Install Anaconda” button to download and install Anaconda.
 
-b. Dowloading the conda config files for launching your environment
+b. Downloading the conda config files for launching your environment
 ------------------------------------------------------------------------
   You can download appropriate DeepLabCut's conda file from <http://www.mackenziemathislab.org/deeplabcut>
 
