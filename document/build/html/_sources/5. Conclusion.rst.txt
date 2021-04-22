@@ -1,0 +1,7 @@
+5. Conclusion
+========================
+Overall, we found that DeepLabCut performed outstandingly given the amount of data used to train the networks. The network outputs a confidence score (maximum value is 1.0) when it places a label, and we observed that for the centroid tracking, the network had a score of 1.0 for over 90% of the 30-minute recording.
+
+Due to the fly being captured by an infrared camera, any time the small legs of the fly move too far from the surface of the sphere, the legs would be hardly visible and cause the labels to jump around. Additionally, we noticed that the network struggled with some points where the fly would cross its legs. During these points in the video, the labels sometimes got swapped with one another. 
+
+Our hope is for our work with DeepLabCut to demonstrate the capabilities of the software and its potential applications for work involving pose estimation of animals. We have generated files that contain the trained networks that are used to track both the legs and centroid of the fly and will provide them to the development team behind the TOLC.

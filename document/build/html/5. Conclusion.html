@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Conclusion &#8212; Improving Drosophila Melanogaster Feature Tracking with DeepLabCut  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="4. DeepLabCut Plots Results" href="4.%20DeepLabCut%20Plot%20Results.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="conclusion">
+<h1>5. Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h1>
+<p>Overall, we found that DeepLabCut performed outstandingly given the amount of data used to train the networks. The network outputs a confidence score (maximum value is 1.0) when it places a label, and we observed that for the centroid tracking, the network had a score of 1.0 for over 90% of the 30-minute recording.</p>
+<p>Due to the fly being captured by an infrared camera, any time the small legs of the fly move too far from the surface of the sphere, the legs would be hardly visible and cause the labels to jump around. Additionally, we noticed that the network struggled with some points where the fly would cross its legs. During these points in the video, the labels sometimes got swapped with one another.</p>
+<p>Our hope is for our work with DeepLabCut to demonstrate the capabilities of the software and its potential applications for work involving pose estimation of animals. We have generated files that contain the trained networks that are used to track both the legs and centroid of the fly and will provide them to the development team behind the TOLC.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Improving Drosophila Melanogaster Feature Tracking with DeepLabCut</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1.%20Introduction%20and%20Background.html">1. Introduction and Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.%20Procedure%20of%20Installing%20DeepLabCut.html">2. Procedure of Installing DeepLabCut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.%20DeepLabCut%20Labelling%20and%20Training.html">3. DeepLabCut Labelling and Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.%20DeepLabCut%20Plot%20Results.html">4. DeepLabCut Plots Results</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Conclusion</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="4.%20DeepLabCut%20Plot%20Results.html" title="previous chapter">4. DeepLabCut Plots Results</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Brayden Waugh, Garrett O’Dell, Xiji Zhao.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/5. Conclusion.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

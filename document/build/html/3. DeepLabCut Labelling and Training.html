@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. DeepLabCut Labelling and Training &#8212; Improving Drosophila Melanogaster Feature Tracking with DeepLabCut  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. DeepLabCut Plots Results" href="4.%20DeepLabCut%20Plot%20Results.html" />
+    <link rel="prev" title="2. Procedure of Installing DeepLabCut" href="2.%20Procedure%20of%20Installing%20DeepLabCut.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="deeplabcut-labelling-and-training">
+<h1>3. DeepLabCut Labelling and Training<a class="headerlink" href="#deeplabcut-labelling-and-training" title="Permalink to this headline">¶</a></h1>
+<p>The objective of our capstone project is to train a network to recognize and track the center point (centroid) of the fruit fly.  This is the point that the TOLC uses to determine how to orient the sphere. We manually labeled 100 frames out of a total of 60,984 to create a network that automatically places the centroid label on the fly. In addition to the centroids, we trained a network that recognizes and places labels on the fly’s legs. For this network, we manually labeled 200 frames to ensure that we got the results we desired.</p>
+<p><strong>SOFTWARE</strong>:</p>
+<blockquote>
+<div><p>Anaconda Individual Edition 1.10.0</p>
+<p>DeepLabCut 2.1.10.2</p>
+<p>Ubuntu 18.04.5 LTS</p>
+<p>Windows 10</p>
+<p><strong>[OPTIONAL]</strong> WinSCP 5.17.10</p>
+<p><strong>[OPTIONAL]</strong> MatLAB R2021a</p>
+</div></blockquote>
+<div class="section" id="step-1-local-machine-and-server-preparation">
+<h2>Step 1 - Local machine and server preparation:<a class="headerlink" href="#step-1-local-machine-and-server-preparation" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>●    Local Machine</p>
+<blockquote>
+<div><p>○        Install Anaconda Individual Edition.</p>
+<p>○        Use Conda Configuration file provided by DLC developers for <strong>CPU</strong> for Anaconda environment setup (<a class="reference external" href="http://www.mackenziemathislab.org/deeplabcut">http://www.mackenziemathislab.org/deeplabcut</a>).</p>
+<p>○        <strong>[OPTIONAL]</strong> Install WinSCP (for easier file transfer between local machine and server).</p>
+<p>○        <strong>[OPTIONAL]</strong> Install MatLAB for video file conversion.</p>
+</div></blockquote>
+<p>●    Server</p>
+<blockquote>
+<div><p>○        Install Anaconda Individual Edition.</p>
+<p>○        Use Conda Configuration file provided by DLC developers for <strong>GPU</strong> for Anaconda environment setup (<a class="reference external" href="http://www.mackenziemathislab.org/deeplabcut">http://www.mackenziemathislab.org/deeplabcut</a>)</p>
+</div></blockquote>
+<p><strong>[OPTIONAL]</strong> Step 1a - Video Data Conversion</p>
+<p>This step was only necessary for us because we needed the video data in a compatible format for DeepLabCut. If your video data is already of a common extension (.*mp4*, .*avi*), continue to Step 2.</p>
+<p>●    Use MatLAB code to convert image data binary file to .*avi*.</p>
+<img alt="_images/Step1.png" src="_images/Step1.png" />
+</div></blockquote>
+<p>The following 4 steps（step 2-step 5) are carried out on the <strong>Windows machine</strong>.</p>
+</div>
+<div class="section" id="step-2-create-the-project-file">
+<h2>Step 2 - Create the project file.<a class="headerlink" href="#step-2-create-the-project-file" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>●    Open Anaconda, activate the DLC-CPU environment, and open it with IPython.</p>
+<p>●    Type ‘import deeplabcut’ in the terminal that appears.</p>
+<p>●    Type <strong>deeplabcut.launch_dlc()</strong> to start DeepLabCut’s GUI.</p>
+<p>●    Click on the <strong>Manage Project</strong> tab and select <strong>Create new project</strong>.</p>
+<p>●    Give the project a <strong>name</strong>, the <strong>experimenter’s name</strong>, and <strong>select the video(s)</strong> to be used.</p>
+<p>●    Under optional attributes, select <strong>copy the videos</strong>. This attribute is necessary on Windows operating systems.</p>
+<p>●    Click <strong>OK</strong> to generate the project directory.</p>
+<p><strong>NOTE</strong>: To load an existing project, follow the above steps until <strong>Manage Project</strong>. From there, select Load an existing project, and <strong>select the config file</strong> that was generated in your project directory.</p>
+</div></blockquote>
+</div>
+<div class="section" id="step-3-edit-project-configuration-file">
+<h2>Step 3 - Edit Project Configuration file<a class="headerlink" href="#step-3-edit-project-configuration-file" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>●    In the <strong>config.yaml</strong> file, we changed the following fields:</p>
+<blockquote>
+<div><p>○        bodyparts</p>
+<p>○        numframes2pick</p>
+<p>○        dotsize</p>
+</div></blockquote>
+<p>●    The <strong>bodyparts</strong> parameter specifies the names for the labels you will use on the video.</p>
+<p>●    The <strong>numframes2pick parameter</strong> specifies the amount of frames that are selected by the kmeans algorithm in the next step (<strong>Extract Frames</strong>). We used 100 for centroid tracking and 200 for legs tracking.</p>
+<p>●    The <strong>dotsize</strong> parameter determines the default size of the labels.</p>
+</div></blockquote>
+</div>
+<div class="section" id="step-4-extract-frames">
+<h2>Step 4 - Extract Frames<a class="headerlink" href="#step-4-extract-frames" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>●    For our testing, we set the optional attributes to the following:</p>
+<blockquote>
+<div><p>○  <strong>Extraction method</strong>: automatic</p>
+<p>○  <strong>Crop Frames?</strong>: GUI</p>
+<p>○  <strong>User Feedback?</strong>: No</p>
+<p>○  <strong>Use OpenCV?</strong>: No</p>
+</div></blockquote>
+<p>●    For frame extraction, we used the <strong>kmeans</strong> algorithm with default cluster step (1) and default GUI slider width (25).</p>
+<p>●    Press <strong>OK</strong> to extract frames.</p>
+</div></blockquote>
+</div>
+<div class="section" id="step-5-label-frames">
+<h2>Step 5 - Label Frames<a class="headerlink" href="#step-5-label-frames" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>●    Click <strong>Label Frames</strong> to bring up the frame labelling GUI.</p>
+<p>●    Click <strong>Load Frames</strong> and select the directory where the extracted frames are stored.</p>
+<p>●    <strong>Use the arrow keys</strong> to change the current label.</p>
+<p>●    <strong>Right click</strong> to apply a label at the mouse cursor. The next label (if applicable) will be selected automatically. <strong>Left click and drag</strong> a label to adjust it.</p>
+<p>●    Once all frames have been labeled, select <strong>Quit</strong>.</p>
+<p>●    Press the <strong>Check Labels</strong>! Button to ensure that the frames were labelled successfully.</p>
+<img alt="_images/step5.png" src="_images/step5.png" />
+</div></blockquote>
+<p>The following 2 steps(step 6-step 7) are carried out on the <strong>Linux server</strong>.</p>
+</div>
+<div class="section" id="step-6-create-training-dataset">
+<h2>Step 6 - Create training dataset<a class="headerlink" href="#step-6-create-training-dataset" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>●    Move the project to the computer/server/data cluster where it will be trained.</p>
+<blockquote>
+<div><p>○        <strong>IMPORTANT</strong>: Once on the training machine, edit the <strong>project_path</strong> parameter in <strong>config.yaml</strong> with the project’s new path.</p>
+</div></blockquote>
+<p>●    Activate the conda environment on the server.</p>
+<p>●    Use <strong>export DLClight=True</strong> to suppress the GUI (if machine does not support GUIs).</p>
+<p>●    Open <strong>IPython</strong> and run <strong>import deeplabcut</strong>.</p>
+<p>●    Create a variable to store the path of your config file:</p>
+<img alt="_images/step6.png" src="_images/step6.png" />
+<p>●    Use the following command to create the training dataset:</p>
+<p><strong>deeplabcut.create_training_dataset(config_path, augmenter_type=’imgaug’)</strong></p>
+</div></blockquote>
+</div>
+<div class="section" id="step-7-train-the-network">
+<h2>Step 7 - Train the Network<a class="headerlink" href="#step-7-train-the-network" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>●    Use the following command to train the network:
+<strong>deeplabcut.train_network(config_path)</strong></p>
+<p>●    The command has optional parameters. For our training, we used the following:</p>
+<blockquote>
+<div><p>○        Centroid Training:</p>
+<p><strong>deeplabcut.train_network(config_path, shuffle=1, gputouse=0, max_snapshots_to_keep=5, autotune=False, displayiters=1000, saveiters=15000, maxiters=160000)</strong></p>
+<p>○        Legs Training:
+<strong>deeplabcut.train_network(config_path, shuffle=1, gputouse=0, max_snapshots_to_keep=5, autotune=False, displayiters=1000, saveiters=20000, maxiters=200000)</strong></p>
+</div></blockquote>
+<p>●    <strong>Shuffle</strong> indicates the index of the training dataset to use (default 1)</p>
+<p>●    <strong>gputouse</strong> indicates the index of the GPU to use for training</p>
+<p>●    <strong>Max_snapshots_to_keep</strong> indicates how many states of the network to save.</p>
+<p>●    <strong>Autotune</strong> is a property of TensorFlow and makes training more efficient when set to False</p>
+<p>●    <strong>Displayiters</strong> indicates how often the network will display loss information.</p>
+<p>●    <strong>Saveiters</strong> determines how often states of the network are saved.</p>
+<p>●    <strong>Maxiters</strong> determines how many iterations the network will be trained for.</p>
+</div></blockquote>
+<p>The following 3 steps(step 8-step 10) are carried out on the <strong>Windows Machine</strong>.</p>
+</div>
+<div class="section" id="step-8-evaluate-the-network">
+<h2>Step 8 - Evaluate the network<a class="headerlink" href="#step-8-evaluate-the-network" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>●    Once the network is trained, move it back onto the Windows machine.</p>
+<blockquote>
+<div><p>○        <strong>IMPORTANT</strong>: Once on the Windows machine, edit the <strong>project_path</strong> parameter in <em>config.yaml</em> with the project’s new path.</p>
+</div></blockquote>
+<p>●    Under the <strong>Evaluate Network</strong> tab in the DeepLabCut GUI, we used the following attributes:</p>
+<blockquote>
+<div><p>○        <strong>Specify the shuffle: 1</strong></p>
+<p>○        <strong>Specify the trainingset index</strong>: 0</p>
+<p>○        <strong>Want to plot maps</strong>: Yes</p>
+<p>○        <strong>Want to plot predictions</strong>: Yes</p>
+<p>○        <strong>Compare all bodyparts</strong>: Yes</p>
+</div></blockquote>
+<p>●    Click on <strong>Evaluate Network</strong> to begin evaluation.</p>
+</div></blockquote>
+</div>
+<div class="section" id="step-9-analyze-videos">
+<h2>Step 9 - Analyze Videos<a class="headerlink" href="#step-9-analyze-videos" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>●    Under the <strong>Analyze Videos tab</strong>, select the video(s) to analyze.</p>
+<p>●    We used the following attributes:</p>
+<blockquote>
+<div><p>○        <strong>Videotype</strong>: .avi</p>
+<p>○        <strong>Specify the shuffle</strong>: 1</p>
+<p>○        <strong>Specify the trainingset index</strong>: 0</p>
+<p>○        <strong>Save results as csv</strong>: No</p>
+<p>○        <strong>Filter the predictions</strong>: No</p>
+<p>○        <strong>Want plots to pop up</strong>: Yes</p>
+<p>○        <strong>Dynamically crop bodyparts</strong>: No</p>
+<p>○        <strong>Plot trajectories</strong>: No</p>
+</div></blockquote>
+<p>●    Click on <strong>Analyze Videos</strong> to begin analysis.</p>
+</div></blockquote>
+</div>
+<div class="section" id="step-10-create-videos">
+<h2>Step 10 - Create Videos<a class="headerlink" href="#step-10-create-videos" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>●    Under the <strong>Create Videos</strong> tab, select the videos to apply labels to.</p>
+<p>●    We used the following attributes:</p>
+<blockquote>
+<div><p>○        <strong>Specify the shuffle</strong>: 1</p>
+<p>○        <strong>Specify the trainingset index</strong>: 0</p>
+<p>○        <strong>Include the skeleton</strong>: No</p>
+<p>○        <strong>Specify trail points</strong>: 0</p>
+<p>○        <strong>Create higher quality video</strong>: No</p>
+<p>○        <strong>Use filtered predictions</strong>: No</p>
+<p>○        <strong>Plot all bodyparts</strong>: Yes</p>
+</div></blockquote>
+<p>●    Click on <strong>RUN</strong> to create the labeled video(s).</p>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Improving Drosophila Melanogaster Feature Tracking with DeepLabCut</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1.%20Introduction%20and%20Background.html">1. Introduction and Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.%20Procedure%20of%20Installing%20DeepLabCut.html">2. Procedure of Installing DeepLabCut</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. DeepLabCut Labelling and Training</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-local-machine-and-server-preparation">Step 1 - Local machine and server preparation:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-create-the-project-file">Step 2 - Create the project file.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-edit-project-configuration-file">Step 3 - Edit Project Configuration file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-extract-frames">Step 4 - Extract Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-5-label-frames">Step 5 - Label Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-6-create-training-dataset">Step 6 - Create training dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-7-train-the-network">Step 7 - Train the Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-8-evaluate-the-network">Step 8 - Evaluate the network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-9-analyze-videos">Step 9 - Analyze Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-10-create-videos">Step 10 - Create Videos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4.%20DeepLabCut%20Plot%20Results.html">4. DeepLabCut Plots Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.%20Conclusion.html">5. Conclusion</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="2.%20Procedure%20of%20Installing%20DeepLabCut.html" title="previous chapter">2. Procedure of Installing DeepLabCut</a></li>
+      <li>Next: <a href="4.%20DeepLabCut%20Plot%20Results.html" title="next chapter">4. DeepLabCut Plots Results</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Brayden Waugh, Garrett O’Dell, Xiji Zhao.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/3. DeepLabCut Labelling and Training.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
