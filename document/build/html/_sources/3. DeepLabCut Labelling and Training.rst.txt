@@ -26,7 +26,7 @@ Step 1 - Local machine and server preparation:
 
        ○	**[OPTIONAL]** Install WinSCP (for easier file transfer between local machine and server).
 
-       ○	**[OPTIONAL]*** Install MatLAB for video file conversion.
+       ○	**[OPTIONAL]** Install MatLAB for video file conversion.
 
    ●	Server 
 
