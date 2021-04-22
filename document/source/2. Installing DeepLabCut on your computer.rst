@@ -3,6 +3,7 @@
 a. Anaconda downloading and installtion 
 -------------------------------------------
   You can go to the website https://www.anaconda.com/products/individual  
+  
   Then, find the “Install Anaconda” button to download and install Anaconda.
 
 b. Downloading the conda config files for launching your environment
