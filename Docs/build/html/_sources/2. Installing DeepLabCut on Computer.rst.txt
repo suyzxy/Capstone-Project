@@ -1,4 +1,4 @@
-2. Installing DeepLabCut on Computer
+2. The Procedure of Installing DeepLabCut
 ============================================
 a. Anaconda downloading and installtion 
 -------------------------------------------
