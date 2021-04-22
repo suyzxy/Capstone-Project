@@ -18,10 +18,3 @@ Welcome to Improving Drosophila Melanogaster Feature Tracking with DeepLabCut's 
 
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
