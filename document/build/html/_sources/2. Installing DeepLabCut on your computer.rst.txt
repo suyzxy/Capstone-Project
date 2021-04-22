@@ -25,7 +25,7 @@ c. Creating your conda environment
 
   Once the environment has been imported, select it and click on the "*Play*" button, and select "*Open with IPython*" and open a terminal window.
 
-  In the terminal, type '*`import deeplabcut`*' and type '*`deeplabcut.launch_dlc()`*' to launch DeepLabCut's GUI
+  In the terminal, type "*import deeplabcut*" and type "*deeplabcut.launch_dlc*()" to launch DeepLabCut's GUI
 
   .. image:: images/P8.png
 
