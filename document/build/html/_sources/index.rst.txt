@@ -10,11 +10,11 @@ Welcome to Improving Drosophila Melanogaster Feature Tracking with DeepLabCut's 
    :maxdepth: 2
    :caption: Contents:
 
-   1. Introduction and Background
-   2. Installing DeepLabCut on Computer
-   3. DeepLabCut Labelling and Training
-   4. DeepLabCut Plot Results
-   5. Conclusion
+   I. Introduction and Background
+   II. Installing DeepLabCut on Computer
+   III. DeepLabCut Labelling and Training
+   IV. DeepLabCut Plot Results
+   V. Conclusion
 
 
 

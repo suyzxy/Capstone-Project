@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Search &mdash; Improving Drosophila Melanogaster Feature Tracking with DeepLabCut  documentation</title>
+  <title>I. Introduction and Background &mdash; Improving Drosophila Melanogaster Feature Tracking with DeepLabCut  documentation</title>
   
 
   
@@ -23,7 +23,6 @@
   
 
   
-    
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -37,10 +36,10 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <script type="text/javascript" src="_static/searchtools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="II. Installing DeepLabCut on your computer" href="II.%20Installing%20DeepLabCut%20on%20Computer.html" />
+    <link rel="prev" title="Welcome to Improving Drosophila Melanogaster Feature Tracking with DeepLabCut’s documentation!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -67,7 +66,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -86,8 +85,8 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="I.%20Introduction%20and%20Background.html">I. Introduction and Background</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">I. Introduction and Background</a></li>
 <li class="toctree-l1"><a class="reference internal" href="II.%20Installing%20DeepLabCut%20on%20Computer.html">II. Installing DeepLabCut on your computer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="III.%20DeepLabCut%20Labelling%20and%20Training.html">III. DeepLabCut Labelling and Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="IV.%20DeepLabCut%20Plot%20Results.html">IV. DeepLabCut Plots Results</a></li>
@@ -140,10 +139,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Search</li>
+      <li>I. Introduction and Background</li>
     
     
       <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/I. Introduction and Background.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -155,23 +158,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="i-introduction-and-background">
+<h1>I. Introduction and Background<a class="headerlink" href="#i-introduction-and-background" title="Permalink to this headline">¶</a></h1>
+<p>DeepLabCut is an advanced tool used for estimating the pose of the objects by using deep learning models. The motivation of the DeePlabCut is to provide a reliable and effective method for high-throughput video analysis, focusing on robust user-defined feature detectors for body parts.</p>
+<p>DeepLabCut is best suited for one or more cameras to capture the action in one place with minimal occlusion. Users can train the network to achieve human-level marking accuracy with just a small group of training images and extend its applications to behavioral analysis in the laboratory, such as for movement, gait analysis, medical and rehabilitation research.</p>
+<p>Transparent Omnidirectional Locomotion Compensator (TOLC) is a device that allows a fly to move indefinitely in a limited space, but there is a limitation in centroid calculations degrading the performance of TOLC since it uses image segmentation to track the fly’s center of mass, making it challenging to define the area of the object, and results are sometimes inaccurate due to the movement of the fly.</p>
+<p>Our capstone project is looking to collect a more precise center of mass in images of Drosophila melanogaster by using the DeepLabCut. Our goal is to use DeeplabCut to improve the speed and accuracy of tracking significantly.</p>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="II.%20Installing%20DeepLabCut%20on%20Computer.html" class="btn btn-neutral float-right" title="II. Installing DeepLabCut on your computer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Improving Drosophila Melanogaster Feature Tracking with DeepLabCut’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
@@ -208,14 +211,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>
