@@ -1,4 +1,4 @@
-1. Introduction and Background
+I. Introduction and Background
 ===================================
 DeepLabCut is an advanced tool used for estimating the pose of the objects by using deep learning models. The motivation of the DeePlabCut is to provide a reliable and effective method for high-throughput video analysis, focusing on robust user-defined feature detectors for body parts.
 

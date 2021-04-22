@@ -1,4 +1,4 @@
-4. DeepLabCut Plots Results
+IV. DeepLabCut Plots Results
 ================================
 a. Centroid Network Plots
 ----------------------------------

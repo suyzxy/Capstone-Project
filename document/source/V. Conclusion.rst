@@ -1,4 +1,4 @@
-5. Conclusion
+V. Conclusion
 ========================
 Overall, we found that DeepLabCut performed outstandingly given the amount of data used to train the networks. The network outputs a confidence score (maximum value is 1.0) when it places a label, and we observed that for the centroid tracking, the network had a score of 1.0 for over 90% of the 30-minute recording.
 
