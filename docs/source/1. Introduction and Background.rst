@@ -1,0 +1,12 @@
+1. Introduction and Background
+===================================
+DeepLabCut is an advanced tool used for estimating the pose of the objects by using deep learning models. The motivation of the DeePlabCut is to provide a reliable and effective method for high-throughput video analysis, focusing on robust user-defined feature detectors for body parts.
+
+DeepLabCut is best suited for one or more cameras to capture the action in one place with minimal occlusion. Users can train the network to achieve human-level marking accuracy with just a small group of training images and extend its applications to behavioral analysis in the laboratory, such as for movement, gait analysis, medical and rehabilitation research.
+
+Transparent Omnidirectional Locomotion Compensator (TOLC) is a device that allows a fly to move indefinitely in a limited space, but there is a limitation in centroid calculations degrading the performance of TOLC since it uses image segmentation to track the fly’s center of mass, making it challenging to define the area of the object, and results are sometimes inaccurate due to the movement of the fly.
+
+Our capstone project is looking to collect a more precise center of mass in images of Drosophila melanogaster by using the DeepLabCut. Our goal is to use DeeplabCut to improve the speed and accuracy of tracking significantly.
+
+
+

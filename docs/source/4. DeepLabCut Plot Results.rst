@@ -1,0 +1,53 @@
+4. DeepLabCut Plots Results
+================================
+a. Centroid Network Plots
+----------------------------------
+ **Plot 1**
+
+     .. image:: images/Plots/P1.png
+
+     This plot shows the X and Y position of the fly’s centroid over the course of the entire video. The plot shows the centroid’s position in perspective of the frame of the video.
+
+ **Plot 2**
+
+     .. image:: images/Plots/P2.png
+
+     This plot also displays the X and Y position of the centroid over time in a linear fashion.
+
+ **Plot 3**
+
+     .. image:: images/Plots/P3.png
+
+     This plot shows how much the centroid moves between each frame. High values would be indicative of when the label “jumps” unnaturally from one frame to the next. The low values depicted in the graph are what we expect to see.
+
+ **Plot 4**
+
+     .. image:: images/Plots/P4.png
+
+     This plot shows the confidence score of the network over the course of the video. We see that for the majority of the video, the network has a maximum confidence score of 1.0. The sudden drop towards the end is caused by the fly losing illumination in the video and becoming blurry. 
+
+b. Legs Networks
+----------------------
+ **Plot 5**
+
+     .. image:: images/Plots/P5.png
+
+     This plot shows the X and Y position of each of the fly’s legs over the course of the entire video. The plot shows the legs’s position in perspective of the frame of the video.
+ 
+ **Plot 6**
+
+     .. image:: images/Plots/P6.png
+
+     This plot also displays the X and Y position of each leg over time in a linear fashion.
+ 
+ **Plot 7**
+
+     .. image:: images/Plots/P7.png
+
+     This plot shows how much the legs move between each frame. High values would be indicative of when the label “jumps” unnaturally from one frame to the next. The low values depicted in the graph are what we expect to see. We note that there is a larger concentration of higher values compared to the centroid graph. The legs of the fly more frequently become invisible in the video which causes this.
+
+ **Plot 8**
+
+     .. image:: images/Plots/P8.png
+
+     Confidence scores for the legs network. Immediately we see that the network’s confidence varies widely over the course of the video. This could be remedied to a degree by refining the network. The most improvement to this would likely be a better method of recording the fly so that its features do not become undetectable.
